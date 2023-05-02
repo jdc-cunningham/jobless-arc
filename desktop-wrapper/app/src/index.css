@@ -1,4 +1,8 @@
+body {
+  display: block;
+}
+
 body * {
-  font-family: roboto, 'sans-serif';
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }

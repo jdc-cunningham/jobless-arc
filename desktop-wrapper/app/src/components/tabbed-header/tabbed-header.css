@@ -1,0 +1,40 @@
+.tabbed-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  flex: 0;
+  border-bottom: 1px solid #282828;
+}
+
+.tabbed-header__tab {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+.tabbed-header__tab.active {
+  border-left: 1px solid #282828;
+  border-top: 1px solid #282828;
+  border-right: 1px solid #282828;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.tabbed-header__tab:not(:first-of-type) {
+  margin-left: 0.5rem;
+}
+
+.tabbed-header__tab:hover {
+  background-color: #282828;
+  color: white;
+  border-left: 1px solid #282828;
+  border-top: 1px solid #282828;
+  border-right: 1px solid #282828;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}

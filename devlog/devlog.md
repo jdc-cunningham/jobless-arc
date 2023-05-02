@@ -62,3 +62,32 @@ I feel good right now though, vibin' present, sleep is nice
 
 distracted
 
+9:00 AM
+
+ugh... my fingers are oily
+
+9:05 AM
+
+distracted... I had an idea though I can get a refund on my VR backed project if desperate that's like a month of expenses
+
+lol the title of this repo, that one time I got isekaid as a homeless man
+
+It is fun to build something freely from scratch, but also it feels like grunt work
+
+To build all the parts out
+
+Okay for the daily thing, it'll just be a large textarea
+
+Then job-hunting is an actual crud thing tracked by time/status
+
+9:19 AM
+
+distracted, time for the metal
+
+going for ugly but functional
+
+9:40 AM
+
+starting to get going
+
+crazy looking back at LinkedIn/reached out, 16 in Mar, 17 in Apr... all Sr. Tech lead type which is not me
