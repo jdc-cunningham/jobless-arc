@@ -120,3 +120,20 @@ distracted
 
 I'm gonna have to start making moves in a couple weeks if I still don't have anything
 
+10:50 AM
+
+<img src="./app-so-far.JPG"/>
+
+the whole point of this app is to keep me motivated/on a schedule
+
+the backing thing is non-refundable ha
+
+I'm losing steam
+
+11:09 AM
+
+damn yeah I feel spent already, just going to go apply to stuff, right it in a notepad for now till I design the job hunting tab, will finish building it tomorrow morning
+
+11:17 AM
+
+spent
