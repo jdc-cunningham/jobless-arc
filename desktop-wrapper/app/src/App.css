@@ -7,3 +7,8 @@
   height: 100vh;
   padding: 0.5rem;
 }
+
+.App__body {
+  width: 100%;
+  flex: 1;
+}

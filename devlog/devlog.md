@@ -91,3 +91,32 @@ going for ugly but functional
 starting to get going
 
 crazy looking back at LinkedIn/reached out, 16 in Mar, 17 in Apr... all Sr. Tech lead type which is not me
+
+9:49 AM
+
+recruiter just hit me up now, updating burn rate app since it is missing a lot of info
+
+I will note, I should focus on applying vs. making this app (less time applying)
+
+I have been fortunate that I was not in the "applied to 500 jobs heard nothing back" group but maybe now...
+
+10:04 AM
+
+oof... yeah I'm more f'd than I realize
+
+10:10 AM quick snack break
+
+10:27 AM
+
+back on... got off the call with recruiter, will study up for that tech stack
+
+yeah I am like legit f'd if I don't get anything this month... how do I manifest money from my ass? idk
+
+I was so used to that 6fig income living check to check, I was helping out people (giving away 30% of my income every month last 3 years) but didn't focus on paying down debts/investing/making side income... so I will change that going forward
+
+10:38 AM
+
+distracted
+
+I'm gonna have to start making moves in a couple weeks if I still don't have anything
+

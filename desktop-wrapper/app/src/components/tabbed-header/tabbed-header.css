@@ -23,6 +23,8 @@
   border-right: 1px solid #282828;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  background-color: #282828;
+  color: white;
 }
 
 .tabbed-header__tab:not(:first-of-type) {
