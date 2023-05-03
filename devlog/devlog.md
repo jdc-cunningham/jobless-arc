@@ -16,7 +16,21 @@ I'm going slow fear is in my mind
 
 math just doesn't work out, need the monies
 
+10:29 AM
 
+making progress, have to finish this today since it's a waste of time doing this vs. applying
+
+10:40 AM
+
+distracted
+
+10:44 AM
+
+still distracted
+
+
+
+---
 
 05/02/2023
 
