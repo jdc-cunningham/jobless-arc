@@ -122,14 +122,31 @@
 }
 
 .JobHunting__job-app-group {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #505050;
+}
+
+.JobHunting__job-app-group:not(:first-of-type) {
+  margin-top: 1rem;
 }
 
 .JobHunting__job-app {
-  border: 1px solid #ccc;
+  position: relative;
+  border: 1px solid #505050;
   border-radius: 6px;
   padding: 0.5rem;
   margin-top: 1rem;
+}
+
+.JobHunting__job-app-edit-btn {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4682B4; /* steel blue */
 }
 
 .JobHunting__job-app-group-date {

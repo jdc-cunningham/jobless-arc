@@ -6,11 +6,14 @@ import PlusIconLight from '../../../assets/icons/uxwing__plus-icon-light.svg';
 const JobHunting = (props) => {
   const [showAddJobAppModal, setShowJobAppModal] = useState(false);
   const [formData, setFormData] = useState({
+    id: '',
     name: '',
     source: '',
+    date: '',
     info: '',
     status: ''
   });
+  const [editing, setEditing] = useState(0);
 
   const updateFormData = (data) => {
     setFormData(prevData => ({
@@ -34,24 +37,30 @@ const JobHunting = (props) => {
     var day = dateObj.getUTCDate();
     var year = dateObj.getUTCFullYear();
     
-    return year + "-" + addZero(month) + "-" + addZero(day);
+    return addZero(month) + "-" + addZero(day) + "-" +  year;
   }
 
   const saveJob = () => {
-    const todaysDate = ymd();
+    const jobId = Date.now();
+    const jobAppDate = formData.date || ymd();
     const jobApps = JSON.parse(localStorage.getItem('job-apps')) || {};
 
-    if (!(todaysDate in jobApps)) {
-      jobApps[todaysDate] = [];
+    if (!(jobAppDate in jobApps)) {
+      jobApps[jobAppDate] = [];
     }
 
-    jobApps[todaysDate].push(formData);
+    jobApps[jobAppDate].push({
+      id: jobId,
+      ...formData,
+    });
 
     localStorage.setItem('job-apps', JSON.stringify(jobApps));
 
     setFormData({
+      id: '',
       name: '',
       source: '',
+      date: '',
       info: '',
       status: '',
     });
@@ -84,6 +93,20 @@ const JobHunting = (props) => {
       value={formData.source}
       onChange={(e) => updateFormData({source: e.target.value})}
     />
+    <input
+      type="text"
+      name="date"
+      placeholder="date applied m-d-Y (optional)"
+      value={formData.date}
+      onChange={(e) => updateFormData({date: e.target.value})}
+    />
+    <input
+      type="text"
+      name="status"
+      placeholder="status eg. rejected"
+      value={formData.status}
+      onChange={(e) => updateFormData({status: e.target.value})}
+    />
     <textarea
       placeholder="info"
       value={formData.info}
@@ -102,11 +125,18 @@ const JobHunting = (props) => {
   const renderJobApps = () => {
     const jobApps = JSON.parse(localStorage.getItem('job-apps')) || {};
 
-    return Object.keys(jobApps).map((date, dateId) => (
+    return Object.keys(jobApps).sort().reverse().map((date, dateId) => (
       <div key={dateId} className="JobHunting__job-app-group">
         <h4 className="JobHunting__job-app-group-date">{date}</h4>
         {jobApps[date].reverse().map((jobApp, jobId) => (
           <div key={jobId} className="JobHunting__job-app">
+            <button
+              type="button"
+              className="JobHunting__job-app-edit-btn"
+              onClick={() => setEditing(jobApp.id)}
+            >
+              edit
+            </button>
             <h3>{jobApp.name}</h3>
             <p>{jobApp.info}</p>
           </div> 

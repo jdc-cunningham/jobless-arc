@@ -40,6 +40,14 @@ the problem is I'm not moving forward... no interviews
 
 have a usable interface, not editable yet though
 
+doing a workout break and food, will continue on this to make it editable but after that will start applying
+
+12:02 PM
+
+back on, going to add editable
+
+
+
 ---
 
 05/02/2023
