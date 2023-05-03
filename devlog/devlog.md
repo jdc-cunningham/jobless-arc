@@ -66,6 +66,28 @@ working edit mode, no delete, going to stop here for today
 
 have not touched freelance yet, should be able to add that quickly/use the same code (copy sucks, not planned)
 
+3:25 PM
+
+ahh man have not applied...
+
+what's the laziest way I can copy the job hunting code into freelance, it's the same thing just stored on its own
+
+3:35 PM
+
+I'm screwing around with my pbp, got Manjaro working on it again thankfully
+
+3:45 PM
+
+alright lazy get this done
+
+there we go, absolutely lazy pos got it done, mind is spent now
+
+need to start applying
+
+3:50 PM
+
+well it's ugly but it works
+
 ---
 
 05/02/2023

@@ -3,6 +3,7 @@ import './App.css';
 import TabbedHeader from './components/tabbed-header/tabbed-header';
 import Daily from './components/body/daily/daily';
 import JobHunting from './components/body/job-hunting/job-hunting';
+import Freelance from './components/body/freelance/freelance';
 
 const App = () => {
   const tabs = {
@@ -20,6 +21,10 @@ const App = () => {
 
     if (activeTab === 'job-hunting') {
       return <JobHunting/>;
+    }
+
+    if (activeTab === 'freelance') {
+      return <Freelance/>;
     }
   }
 

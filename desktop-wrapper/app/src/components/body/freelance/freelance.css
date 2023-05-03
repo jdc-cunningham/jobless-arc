@@ -1,0 +1,177 @@
+.JobHunting {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.JobHunting__sidebar {
+  flex: 0;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  border-right: 1px solid #ccc;
+  height: 100%;
+}
+
+.JobHunting__sidebar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.JobHunting__sidebar button .light-plus-icon {
+  display: none;
+}
+
+.JobHunting__sidebar button:hover {
+  background-color: #282828;
+}
+
+.JobHunting__sidebar button:hover .dark-plus-icon {
+  display: none;
+}
+
+.JobHunting__sidebar button:hover .light-plus-icon {
+  display: block;
+}
+
+.JobHunting__sidebar button img {
+  width: 80%;
+  height: auto;
+  color: #282828;
+}
+
+.JobHunting__body {
+  flex: 1;
+  padding: 1rem;
+}
+
+.JobHunting__add-job-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.JobHunting__add-job-form h2 {
+  font-size: 2rem;
+}
+
+.JobHunting__add-job-form input,
+.JobHunting__add-job-form textarea {
+  font-size: 2rem;
+  padding: 0.5rem;
+  width: 50%;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border-color: #ccc;
+  border-width: 1px;
+}
+
+.JobHunting__add-job-form textarea {
+  min-height: 150px;
+  font-size: 1.5rem;
+}
+
+.JobHunting__save-job-app-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 0.25rem 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  border: 0;
+  background-color: #505050;
+  color: white;
+}
+
+.JobHunting__save-job-app-btn:hover {
+  background-color: #282828;
+}
+
+.JobHunting__close-form-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background-color: #DE3163; /* Cerise */
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.JobHunting__close-form-btn img {
+  transform: rotate(45deg);
+  width: 80%;
+}
+
+.JobHunting__job-apps {
+  display: block;
+  overflow-y: auto;
+}
+
+.JobHunting__job-app-group {
+  border-top: 1px solid #505050;
+}
+
+.JobHunting__job-app-group:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+.JobHunting__job-app {
+  position: relative;
+  border: 1px solid #505050;
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+.JobHunting__job-app.red {
+  border-left: 4px solid red;
+}
+
+.JobHunting__job-app.yellow {
+  border-left: 4px solid yellow;
+}
+
+.JobHunting__job-app.orange {
+  border-left: 4px solid orange;
+}
+
+.JobHunting__job-app-edit-btn {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4682B4; /* steel blue */
+}
+
+.JobHunting__job-app-group-date {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  width: 100%;
+  text-align: right;
+}
+
+.JobHunting__job-app h3 {
+  font-size: 1.25rem;
+}
+
+.JobHunting__job-app p {
+  margin-top: 0.5rem;
+}
