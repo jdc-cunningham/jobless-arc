@@ -13,13 +13,21 @@ const JobHunting = (props) => {
     info: '',
     status: ''
   });
-  const [editing, setEditing] = useState(0);
+  const [editing, setEditing] = useState(null); // type juggling
 
+  // shared states, bad
   const updateFormData = (data) => {
-    setFormData(prevData => ({
-      ...prevData,
-      ...data
-    }));
+    if (editing) {
+      setEditing(prevData => ({
+        ...prevData,
+        ...data
+      }));
+    } else {
+      setFormData(prevData => ({
+        ...prevData,
+        ...data
+      }));
+    }
   }
 
   const addZero = (num) => {
@@ -31,7 +39,7 @@ const JobHunting = (props) => {
   }
 
   // https://stackoverflow.com/a/2013332/2710227
-  const ymd = () => {
+  const mdy = () => {
     var dateObj = new Date();
     var month = dateObj.getUTCMonth() + 1; //months from 1-12
     var day = dateObj.getUTCDate();
@@ -42,7 +50,7 @@ const JobHunting = (props) => {
 
   const saveJob = () => {
     const jobId = Date.now();
-    const jobAppDate = formData.date || ymd();
+    const jobAppDate = formData.date.replaceAll('/', '-') || mdy();
     const jobApps = JSON.parse(localStorage.getItem('job-apps')) || {};
 
     if (!(jobAppDate in jobApps)) {
@@ -50,8 +58,8 @@ const JobHunting = (props) => {
     }
 
     jobApps[jobAppDate].push({
-      id: jobId,
       ...formData,
+      id: jobId,
     });
 
     localStorage.setItem('job-apps', JSON.stringify(jobApps));
@@ -68,59 +76,78 @@ const JobHunting = (props) => {
     setShowJobAppModal(false);
   }
 
+  const modifyJob = () => {
+    const jobApps = JSON.parse(localStorage.getItem('job-apps'));
+    const updatedJobApps = {
+      ...jobApps,
+      [editing.date]: [
+        ...jobApps[editing.date].filter(job => job.id !== editing.id),
+        editing,
+      ]
+    };
+
+    localStorage.setItem('job-apps', JSON.stringify(updatedJobApps));
+
+    setEditing();
+
+    setShowJobAppModal(false);
+  }
+
   // you'd use form validation here eg. react-hook-form + yup schema validation
-  const addJobForm = <div className="JobHunting__add-job-form">
-    <h2>Add new job application</h2>
-    <button
-      type="button"
-      className="JobHunting__close-form-btn"
-      title="close form" 
-      onClick={() => setShowJobAppModal(false)}
-    >
-      <img src={PlusIconLight} alt="close form"/>
-    </button>
-    <input
-      type="text"
-      name="name"
-      placeholder="name"
-      value={formData.name}
-      onChange={(e) => updateFormData({name: e.target.value})}
-    />
-    <input
-      type="text"
-      name="source"
-      placeholder="source"
-      value={formData.source}
-      onChange={(e) => updateFormData({source: e.target.value})}
-    />
-    <input
-      type="text"
-      name="date"
-      placeholder="date applied m-d-Y (optional)"
-      value={formData.date}
-      onChange={(e) => updateFormData({date: e.target.value})}
-    />
-    <input
-      type="text"
-      name="status"
-      placeholder="status eg. rejected"
-      value={formData.status}
-      onChange={(e) => updateFormData({status: e.target.value})}
-    />
-    <textarea
-      placeholder="info"
-      value={formData.info}
-      onChange={(e) => updateFormData({info: e.target.value})}
-    />
-    <button
-      type="button"
-      className="JobHunting__save-job-app-btn"
-      title="save job app"
-      onClick={() => saveJob()}
-    >
-      Save
-    </button>
-  </div>
+  const addJobForm = (jobApp) => {
+    return <div className="JobHunting__add-job-form">
+      <h2>Add new job application</h2>
+      <button
+        type="button"
+        className="JobHunting__close-form-btn"
+        title="close form" 
+        onClick={() => editing ? setEditing() : setShowJobAppModal(false)}
+      >
+        <img src={PlusIconLight} alt="close form"/>
+      </button>
+      <input
+        type="text"
+        name="name"
+        placeholder="name"
+        value={jobApp ? jobApp.name : formData.name}
+        onChange={(e) => updateFormData({name: e.target.value})}
+      />
+      <input
+        type="text"
+        name="source"
+        placeholder="source"
+        value={jobApp ? jobApp.source : formData.source}
+        onChange={(e) => updateFormData({source: e.target.value})}
+      />
+      <input
+        type="text"
+        name="date"
+        placeholder="date applied m-d-Y (optional)"
+        value={jobApp ? jobApp.date : formData.date.replaceAll('/', '-')}
+        onChange={(e) => updateFormData({date: e.target.value})}
+      />
+      <input
+        type="text"
+        name="status"
+        placeholder="status eg. rejected"
+        value={jobApp ? jobApp.status : formData.status}
+        onChange={(e) => updateFormData({status: e.target.value})}
+      />
+      <textarea
+        placeholder="info"
+        value={jobApp ? jobApp.info : formData.info}
+        onChange={(e) => updateFormData({info: e.target.value})}
+      />
+      <button
+        type="button"
+        className="JobHunting__save-job-app-btn"
+        title="save job app"
+        onClick={() => editing ? modifyJob() : saveJob()}
+      >
+        Save
+      </button>
+    </div>
+  }
 
   const renderJobApps = () => {
     const jobApps = JSON.parse(localStorage.getItem('job-apps')) || {};
@@ -133,7 +160,7 @@ const JobHunting = (props) => {
             <button
               type="button"
               className="JobHunting__job-app-edit-btn"
-              onClick={() => setEditing(jobApp.id)}
+              onClick={() => setEditing(jobApp)}
             >
               edit
             </button>
@@ -154,8 +181,9 @@ const JobHunting = (props) => {
       </button>
     </div>
     <div className="JobHunting__body">
-      {showAddJobAppModal && <div className="JobHunting__add-job">{addJobForm}</div>}
-      {!showAddJobAppModal && <div className="JobHunting__job-apps">{renderJobApps()}</div>}
+      {editing && addJobForm(editing)}
+      {!editing && showAddJobAppModal && <div className="JobHunting__add-job">{addJobForm()}</div>}
+      {!editing && !showAddJobAppModal && <div className="JobHunting__job-apps">{renderJobApps()}</div>}
     </div>
   </div>
 }

@@ -46,6 +46,12 @@ doing a workout break and food, will continue on this to make it editable but af
 
 back on, going to add editable
 
+12:27 PM
+
+initially I was going for editable rows but harder than just a modal
+
+I have to apply to stuff today so I will stop this soon once I can edit/modify without directly changing the data (localStorage)
+
 
 
 ---
