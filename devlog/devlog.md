@@ -1,3 +1,23 @@
+05/03/2023
+
+9:40 AM
+
+Ahh man... the feeling of dread, nice to wake up to it
+
+What do I want right now? An overview of all the jobs I applied to/statuses
+
+I need to try more, apply and land freelance roles, start generating income
+
+I will also sell more of my stuff as time goes on/get more desperate
+
+10:06 AM
+
+I'm going slow fear is in my mind
+
+math just doesn't work out, need the monies
+
+
+
 05/02/2023
 
 8:16 AM
@@ -137,3 +157,13 @@ damn yeah I feel spent already, just going to go apply to stuff, right it in a n
 11:17 AM
 
 spent
+
+1:29 PM
+
+did my mini workout, I'm going to get this thing made, the job part at least
+
+to start logging info, since I didn't apply much today/wasted time
+
+1:45 PM
+
+well... maybe I'm trying, maybe have to ship something I sold (oscope) I'm so sad... I never even used it, supposed to learn it

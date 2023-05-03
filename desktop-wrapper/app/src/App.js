@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import TabbedHeader from './components/tabbed-header/tabbed-header';
 import Daily from './components/body/daily/daily';
+import JobHunting from './components/body/job-hunting/job-hunting';
 
 const App = () => {
   const tabs = {
@@ -11,24 +12,16 @@ const App = () => {
   };
 
   const [activeTab, setActiveTab] = useState('daily');
-  const [text, setText] = useState('');
 
   const getAppBody = () => {
     if (activeTab === 'daily') {
-      return <Daily text={text} setText={setText} />
+      return <Daily/>;
+    }
+
+    if (activeTab === 'job-hunting') {
+      return <JobHunting/>;
     }
   }
-
-  useEffect(() => {
-    if (text) {
-      localStorage.setItem('daily-text', text);
-    }
-  }, [text])
-
-  useEffect(() => {
-    const dailyText = localStorage.getItem('daily-text') || '';
-    setText(dailyText);
-  }, []);
 
   return (
     <div className="App">

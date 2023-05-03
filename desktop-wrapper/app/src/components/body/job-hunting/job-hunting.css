@@ -1,0 +1,54 @@
+.JobHunting {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.JobHunting__sidebar {
+  flex: 0;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  border-right: 1px solid #ccc;
+  height: 100%;
+}
+
+.JobHunting__sidebar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.JobHunting__sidebar button .light-plus-icon {
+  display: none;
+}
+
+.JobHunting__sidebar button:hover {
+  background-color: #282828;
+}
+
+.JobHunting__sidebar button:hover .dark-plus-icon {
+  display: none;
+}
+
+.JobHunting__sidebar button:hover .light-plus-icon {
+  display: block;
+}
+
+.JobHunting__sidebar button img {
+  width: 100%;
+  height: auto;
+  margin: 0.25rem;
+  color: #282828;
+}
+
+.JobHunting__body {
+  flex: 1;
+}
