@@ -149,6 +149,22 @@ const JobHunting = (props) => {
     </div>
   }
 
+  const getStatusHighlight = (status, date) => {
+    if (status.indexOf('rejecte') !== -1) {
+      return 'red';
+    }
+
+    const epoch = new Date(date).getTime();
+    const elapsedTime = Math.floor((Date.now() - epoch) / 1000);
+    const daysElapsed = Math.ceil(elapsedTime / 84000);
+
+    if (daysElapsed > 7 && status.indexOf('interview') === -1) {
+      return 'orange';
+    }
+
+    return '';
+  }
+
   const renderJobApps = () => {
     const jobApps = JSON.parse(localStorage.getItem('job-apps')) || {};
 
@@ -156,7 +172,7 @@ const JobHunting = (props) => {
       <div key={dateId} className="JobHunting__job-app-group">
         <h4 className="JobHunting__job-app-group-date">{date}</h4>
         {jobApps[date].reverse().map((jobApp, jobId) => (
-          <div key={jobId} className="JobHunting__job-app">
+          <div key={jobId} className={`JobHunting__job-app ${getStatusHighlight(jobApp.status, jobApp.date)}`}>
             <button
               type="button"
               className="JobHunting__job-app-edit-btn"

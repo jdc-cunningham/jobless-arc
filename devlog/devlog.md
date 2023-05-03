@@ -52,6 +52,14 @@ initially I was going for editable rows but harder than just a modal
 
 I have to apply to stuff today so I will stop this soon once I can edit/modify without directly changing the data (localStorage)
 
+12:52 PM
+
+quick break
+
+1:24 PM
+
+back on
+
 
 
 ---

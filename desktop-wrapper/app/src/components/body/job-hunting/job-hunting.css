@@ -137,6 +137,14 @@
   margin-top: 1rem;
 }
 
+.JobHunting__job-app.red {
+  border-left: 4px solid red;
+}
+
+.JobHunting__job-app.orange {
+  border-left: 4px solid orange;
+}
+
 .JobHunting__job-app-edit-btn {
   position: absolute;
   top: 0.25rem;
