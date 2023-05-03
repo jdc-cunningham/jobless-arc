@@ -150,8 +150,12 @@ const JobHunting = (props) => {
   }
 
   const getStatusHighlight = (status, date) => {
-    if (status.indexOf('rejecte') !== -1) {
+    if (status.indexOf('rejected') !== -1) {
       return 'red';
+    }
+
+    if (status.indexOf('waitlisted') !== -1) {
+      return 'orange';
     }
 
     const epoch = new Date(date).getTime();
@@ -159,7 +163,7 @@ const JobHunting = (props) => {
     const daysElapsed = Math.ceil(elapsedTime / 84000);
 
     if (daysElapsed > 7 && status.indexOf('interview') === -1) {
-      return 'orange';
+      return 'yellow';
     }
 
     return '';
