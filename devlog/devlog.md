@@ -28,7 +28,17 @@ distracted
 
 still distracted
 
+11:06 AM
 
+slowing down... fear/dread in my mind
+
+11:16 AM
+
+the problem is I'm not moving forward... no interviews
+
+11:43 AM
+
+have a usable interface, not editable yet though
 
 ---
 

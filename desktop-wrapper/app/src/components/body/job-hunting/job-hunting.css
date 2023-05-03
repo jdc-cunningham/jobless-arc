@@ -71,6 +71,9 @@
   padding: 0.5rem;
   width: 50%;
   margin-top: 1rem;
+  border-radius: 0.5rem;
+  border-color: #ccc;
+  border-width: 1px;
 }
 
 .JobHunting__add-job-form textarea {
@@ -111,4 +114,35 @@
 .JobHunting__close-form-btn img {
   transform: rotate(45deg);
   width: 80%;
+}
+
+.JobHunting__job-apps {
+  display: block;
+  overflow-y: auto;
+}
+
+.JobHunting__job-app-group {
+  border-top: 1px solid #ccc;
+}
+
+.JobHunting__job-app {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+.JobHunting__job-app-group-date {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  width: 100%;
+  text-align: right;
+}
+
+.JobHunting__job-app h3 {
+  font-size: 1.25rem;
+}
+
+.JobHunting__job-app p {
+  margin-top: 0.5rem;
 }
