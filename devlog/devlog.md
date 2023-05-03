@@ -60,7 +60,11 @@ quick break
 
 back on
 
+1:38 PM
 
+working edit mode, no delete, going to stop here for today
+
+have not touched freelance yet, should be able to add that quickly/use the same code (copy sucks, not planned)
 
 ---
 
