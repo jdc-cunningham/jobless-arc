@@ -51,6 +51,8 @@
 .JobHunting__body {
   flex: 1;
   padding: 1rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 42px);
 }
 
 .JobHunting__add-job-form {
@@ -118,7 +120,6 @@
 
 .JobHunting__job-apps {
   display: block;
-  overflow-y: auto;
 }
 
 .JobHunting__job-app-group {
