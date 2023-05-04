@@ -22,7 +22,7 @@ app.on('ready', () => {
 
   // load html file into window
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, './reactjs-app/build/index.html'),
+    pathname: path.join(__dirname, './app/build/index.html'),
     protocol: 'file:',
     slashes: true,
   }));

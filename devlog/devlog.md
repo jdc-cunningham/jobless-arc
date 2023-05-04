@@ -88,6 +88,22 @@ need to start applying
 
 well it's ugly but it works
 
+3:54 PM
+
+oh yeah let me package it and see what happens... I'm concerned about local storage, right now using localhost:3000 "domain" to save against
+
+but maybe they're all the same since not sessionStorage... it seems to be per domain
+
+ehh I could build it but if rebuilding/redploying wipes the state that could be bad, I'll find out
+
+4:03 PM
+
+yeah doesn't seem like you're supposed to be able to use localStorage easily with Electron, need to use something
+
+maybe I need the window call
+
+well... I'll just deploy it on a local server for now unless I upgrade the data store (api)
+
 ---
 
 05/02/2023
