@@ -150,7 +150,10 @@ const JobHunting = (props) => {
   }
 
   const getStatusHighlight = (status, date) => {
-    if (status.indexOf('rejected') !== -1) {
+    if (
+      status.indexOf('rejected') !== -1 ||
+      status.indexOf('poorly') !== -1
+    ) {
       return 'red';
     }
 
