@@ -1,3 +1,19 @@
+05/04/2023
+
+9:34 AM
+
+this might be another waste of time but I'm tempted to make a local (just for me) job aggregator
+
+it would be in the form of a chrome extension (assuming it can work while tab is inactive) then go through a script to navigate the page/scrape it.
+
+Then put them in a local database for me to view locally as a pool
+
+One of those waste of time things... I can do other things, practice technologies/do some leet/dsa/system design stuff
+
+I did fix up some overflow stuff real quick
+
+---
+
 05/03/2023
 
 9:40 AM
